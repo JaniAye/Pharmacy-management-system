@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="398.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="398.0" fitWidth="586.0" opacity="0.89" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/kendal-L4iKccAChOc-unsplash.jpg" />
+         </image></ImageView>
+      <AnchorPane layoutX="96.0" layoutY="59.0" opacity="0.88" prefHeight="275.0" prefWidth="382.0" style="-fx-background-color: #ecf0f1;">
+         <children>
+            <JFXTextField fx:id="txtUn" labelFloat="true" layoutX="56.0" layoutY="42.0" onAction="#txtUnOnAction" promptText="User Name">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnLogin" layoutX="248.0" layoutY="201.0" onAction="#btnLoginOnAction" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #1abc9c;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnClr" layoutX="97.0" layoutY="201.0" onAction="#btnClrOnAction" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #e67e22;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXPasswordField fx:id="psfield" labelFloat="true" layoutX="56.0" layoutY="122.0" prefHeight="25.0" prefWidth="204.0" promptText="Password">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></JFXPasswordField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

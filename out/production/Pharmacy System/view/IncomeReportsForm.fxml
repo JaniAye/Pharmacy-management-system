@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="639.0" prefWidth="1218.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomeReportsFormController">
+   <children>
+      <AnchorPane layoutX="69.0" layoutY="64.0" opacity="0.83" prefHeight="481.0" prefWidth="508.0" style="-fx-background-color: #ecf0f1;">
+         <children>
+            <TableView fx:id="tblorders" layoutX="31.0" layoutY="54.0" opacity="0.85" prefHeight="317.0" prefWidth="442.0">
+              <columns>
+                <TableColumn fx:id="coloid" prefWidth="95.0" text="OrderID" />
+                <TableColumn fx:id="colpid" prefWidth="99.0" text="PaymentID" />
+                  <TableColumn fx:id="colodate" prefWidth="132.0" text="Order Date" />
+                  <TableColumn fx:id="coltot" prefWidth="115.0" text="Total " />
+              </columns>
+            </TableView>
+            <Label layoutX="22.0" layoutY="393.0" text="Total Sales in This Month :">
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbltotsales" layoutX="268.0" layoutY="389.0" prefHeight="28.0" prefWidth="118.0" text="Label" textFill="#07b825">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnPrint" layoutX="382.0" layoutY="426.0" onAction="#btnPrintOnAction" prefHeight="41.0" prefWidth="112.0" style="-fx-background-color: #1abc9c;" text="Print Report" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="56.0" layoutY="11.0" text="Monthly Sales">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="186.0" layoutY="24.0" prefHeight="1.0" prefWidth="314.0" />
+            <Separator layoutX="4.0" layoutY="24.0" prefHeight="3.0" prefWidth="46.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="642.0" layoutY="65.0" opacity="0.83" prefHeight="481.0" prefWidth="520.0" style="-fx-background-color: #ecf0f1;">
+         <children>
+            <TableView fx:id="tblYearlysales" layoutX="29.0" layoutY="52.0" opacity="0.85" prefHeight="317.0" prefWidth="457.0">
+               <columns>
+                  <TableColumn fx:id="colYOrderID" prefWidth="110.0" text="OrderID" />
+                  <TableColumn fx:id="colYPayId" prefWidth="117.0" text="PaymentID" />
+                  <TableColumn fx:id="colYOrderDate" prefWidth="108.0" text="Order Date" />
+                  <TableColumn fx:id="colYTotal" prefWidth="120.0" text="Total " />
+               </columns>
+            </TableView>
+            <Label layoutX="18.0" layoutY="394.0" text="Total Sales in This Year :">
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblYselseTot" layoutX="253.0" layoutY="390.0" prefHeight="28.0" prefWidth="118.0" text="Label" textFill="#07b825">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnPrintYsalses" layoutX="382.0" layoutY="426.0" onAction="#btnYsalsesPrint" prefHeight="41.0" prefWidth="118.0" style="-fx-background-color: #1abc9c;" text="Print Report" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="63.0" layoutY="12.0" text="Yearly Sales">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="176.0" layoutY="25.0" prefHeight="1.0" prefWidth="314.0" />
+            <Separator layoutX="4.0" layoutY="25.0" prefHeight="3.0" prefWidth="53.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

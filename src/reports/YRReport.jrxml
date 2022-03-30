@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-09T21:39:17 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="YRReport" pageWidth="450" pageHeight="550" columnWidth="410" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a0b822e-ddda-4d19-8583-c675754e2c33">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+<!--	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="PharmacyDB"/>-->
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="dateY" class="java.lang.String"/>
+	<parameter name="timeY" class="java.lang.String"/>
+	<parameter name="totalY" class="java.lang.Double"/>
+	<queryString language="SQL">
+		<![CDATA[select * from odtemp;]]>
+	</queryString>
+	<field name="OrderId" class="java.lang.String"/>
+	<field name="PID" class="java.lang.String"/>
+	<field name="OrderDate" class="java.lang.String"/>
+	<field name="OrderTime" class="java.lang.String"/>
+	<field name="totCost" class="java.lang.Double"/>
+	<group name="OrderId">
+		<groupExpression><![CDATA[$F{OrderId}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="114" y="-5" width="160" height="30" uuid="f038bde0-00d9-46d3-98af-b6bde71fbf50"/>
+				<textElement>
+					<font fontName="Times New Roman" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sampath Pharmacy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="19" width="160" height="40" uuid="385eadff-88d6-4a04-acac-dd7d4884ba9a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Galle Road, Ambalangoda,  T.P - 0912268966
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="112" y="5" width="140" height="31" uuid="a32255f1-6438-4c05-a5e2-071a71c71bd7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Yearly Sales Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="25" width="40" height="20" uuid="8e9cc7a3-1d01-4cff-841b-a6f415c00bb7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="287" y="23" width="40" height="20" uuid="95ffba84-5e9f-4eea-8a11-af299396ad27"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Time :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="72" y="26" width="100" height="20" uuid="80cfdc4f-3319-4ebb-a996-85ad205b8f5a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="24" width="69" height="18" uuid="2d40effd-6cd9-4743-94c8-a700591c2817"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{timeY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="-7" y="-18" width="415" height="22" uuid="384df57a-d737-40e2-8989-cb0f63238a5f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="-2" width="60" height="20" uuid="bfecd1b3-85a4-45f0-becf-58be45ed6eba"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="-3" width="60" height="20" uuid="77e182b4-93ab-46b4-8c2d-ce4ac7a0b127"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="-3" width="90" height="20" uuid="c9f45653-d6b2-4da5-a60b-0d7d7fa1f82f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="-3" width="90" height="20" uuid="3244193f-8d1c-4217-a34a-c746378973ee"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-6" y="17" width="415" height="22" uuid="5686235d-62fe-4b43-bb73-de5e5c6e62ac"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="2" width="67" height="20" uuid="245ed0fe-e938-455a-a25e-06b3d0c6178b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OrderId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="101" y="2" width="60" height="20" uuid="2ee152ab-b722-411b-9fa3-84e95164b8d9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="2" width="77" height="20" uuid="2a061c5b-59bc-4e83-9696-a41e6c1e9912"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OrderDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="2" width="70" height="20" uuid="e8c002aa-72c1-4006-9898-d2e739dbb0b3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-8" y="9" width="415" height="22" uuid="a30e186b-d28c-4c6b-90ae-c816c5e8b3aa"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="250" y="4" width="100" height="30" uuid="ed5eb1d6-27d1-4c83-9d7b-818d54d0fa25"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Sales :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="330" y="3" width="90" height="20" uuid="c40d3be9-1a92-409f-88cd-1588f53f436f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="639.0" prefWidth="1218.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierFormController">
+   <children>
+      <TableView fx:id="tblSupplier" layoutX="315.0" layoutY="45.0" opacity="0.85" prefHeight="539.0" prefWidth="856.0" style="-fx-background-color: #ced6e0;">
+        <columns>
+          <TableColumn fx:id="colsupid" prefWidth="100.0" text="Suppler ID" />
+          <TableColumn fx:id="colcompany" prefWidth="167.0" text="Company" />
+            <TableColumn fx:id="colemail" prefWidth="185.0" text="Email" />
+            <TableColumn fx:id="colphoneno" prefWidth="132.0" text="Phone No" />
+            <TableColumn fx:id="coladdr" prefWidth="197.0" text="Address" />
+            <TableColumn fx:id="coloperator" prefWidth="74.0" text="Operator" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="34.0" layoutY="45.0" opacity="0.8" prefHeight="539.0" prefWidth="263.0" style="-fx-background-color: #dfe4ea;">
+         <children>
+            <JFXTextField fx:id="txtSupid" editable="false" labelFloat="true" layoutX="45.0" layoutY="36.0" prefHeight="32.0" prefWidth="160.0" promptText="Supplier ID">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtCOmpanyName" labelFloat="true" layoutX="42.0" layoutY="104.0" prefHeight="32.0" prefWidth="167.0" promptText="Company Name">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPno" labelFloat="true" layoutX="42.0" layoutY="172.0" prefHeight="32.0" prefWidth="167.0" promptText="Phone No">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="42.0" layoutY="239.0" prefHeight="32.0" prefWidth="175.0" promptText="Email">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="38.0" layoutY="318.0" prefHeight="32.0" prefWidth="175.0" promptText="Address">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnAdd" layoutX="20.0" layoutY="391.0" onAction="#btnsaveOnAction" prefHeight="45.0" prefWidth="218.0" style="-fx-background-color: #2ed573;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdate" layoutX="16.0" layoutY="455.0" onAction="#btnUpdOnAction" prefHeight="39.0" prefWidth="109.0" style="-fx-background-color: #ff6348;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnCancel" layoutX="138.0" layoutY="455.0" onAction="#btnCancelOnAction" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: #eccc68;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
